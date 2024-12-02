@@ -1,0 +1,18 @@
+
+body{
+    background-color: black;
+}
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+#countBox{
+    background-color: wheat;
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
