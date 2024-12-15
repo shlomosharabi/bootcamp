@@ -1,0 +1,122 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(152, 169, 152);
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header__addTask{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: wheat;
+    border: 5px solid black;
+    padding: 15px;
+    border-radius: 5px;
+    width: 300px;
+}
+.header__h1{
+    font-family: sans-serif;
+
+}
+.header__addTask{
+    display: flex;
+    flex-direction: column;
+}
+#header__Btn{
+    background-color: blue;
+    width: 50px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+#header__Btn:hover{
+    background-color: aqua;
+}
+.main{
+    width: 100%;
+    padding-top: 10px;
+
+}
+.main__taskColmuns{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+
+}
+.main__toDo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 3px solid blue;
+    width: 300px;
+    border-radius: 5px;
+    padding: 15px;
+}
+#main__tasks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.littleTask{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: wheat;
+}
+.main__onGo{
+    background-color: white;
+    border: 3px solid red;
+    width: 300px;
+    border-radius: 5px;
+
+
+}
+.main__done{
+    background-color: white;
+    border: 3px solid gray;
+    width: 300px;
+    border-radius: 5px;
+
+    
+}
+.main__taskTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main__underLine{
+    width: 100px;
+    border-bottom: 1px solid green;
+    margin-bottom: 15px;
+}
+svg{
+    width: 20px;
+    height: 35px;
+
+}

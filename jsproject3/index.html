@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TaskList</title>
+</head>
+<body>
+
+    <div class="container" id="container">
+
+        <header class="header">
+
+            <h1 class="header__title">Task list</h1>
+
+            <div class="header__underline"></div>
+
+            <div class="header__writeTask">
+
+                <div class="header__labelDiv">
+                    <label for="">Add Task</label>
+
+                </div>
+                <textarea name="" id="header__textArea" class="header__textArea" placeholder="Enter Task"></textarea>
+
+                <div class="header__btnDiv">
+                    <button class="btn"  id="btn">Submit</button>
+
+                </div>
+            </div>
+
+            <div id="header__serch" class="header__serch">
+
+                <label for="">Enter serch</label>
+                <input type="text" id="serch__input" class="serch__input" placeholder = "Enter serch">
+                <button id="serch__btn" class="serch__btn">Serch</button>
+
+            </div>
+
+        </header>
+
+        <main class="main">
+
+            <div class="main__allTasks" id="main__allTasks">
+
+            </div>
+            <button id="clearBtn" class="clearBtn">Clear all</button>
+
+        </main>
+
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
