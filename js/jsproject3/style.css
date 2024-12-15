@@ -28,6 +28,7 @@ body{
     font-size: 3rem;
     font-weight: bold;
     font-family: cursive;
+
 }
 .header__underline{
     width: 150px;
@@ -69,10 +70,11 @@ body{
     font-size: large;
     font-weight: 400;
     background-color: rgb(139, 182, 139);
-
+    transition: font-size 0.5s ease;
 
 }
 .btn:hover{
+    font-size: x-large;
     background-color: rgb(163, 105, 105);
 }
 .header__serch{
@@ -93,9 +95,11 @@ body{
     font-weight: 400;
     border-radius: 5px;
     background-color: rgb(139, 182, 139);
+    transition: font-size 0.5s ease;
 
 }
 .serch__btn:hover{
+    font-size: large;
     background-color: rgb(163, 105, 105);
 
 }
@@ -138,7 +142,11 @@ body{
     font-family: monospace;
     font-size: large;
     background-color: rgb(163, 105, 105);
+    transition: font-size 1s ease;
 
+}
+.task:hover{
+    font-size: x-large;
 }
 .time{
     justify-self: end;
@@ -184,9 +192,10 @@ body{
     font-size: x-large;
     font-weight: 400;
     background-color: rgb(139, 182, 139);
-
+    transition: font-size 0.5s ease;
 
 }
 .clearBtn:hover{
+    font-size: large;
     background-color: rgb(163, 105, 105);
 }

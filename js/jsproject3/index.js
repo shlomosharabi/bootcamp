@@ -8,7 +8,6 @@ const serch__input = document.getElementById("serch__input");
 const serch__btn = document.getElementById("serch__btn");
 let taskArray = JSON.parse(localStorage.getItem("tasks")) || [];
 let newTaskArray = [];
-let doneTasks = JSON.parse(localStorage.getItem("pass")) || [];
 let id;
 
 
