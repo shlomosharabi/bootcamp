@@ -64,10 +64,19 @@ function printTasks(array) {
        
         //                 פונקציה למחיקת משימות פר משימה
      remuveButton.onclick =  () => {
-        console.log(`Remuve task '${remuveButton.id}'`);
+
+        if (confirm("Are sure you want to remove this task?")) {
+
+            console.log(`Remuve task '${remuveButton.id}'`);
        
-        taskArray = taskArray.filter((t) => t.id !== parseInt(element.id));
-        localStorage.setItem("tasks",JSON.stringify(taskArray));
+            taskArray = taskArray.filter((t) => t.id !== parseInt(element.id));
+            localStorage.setItem("tasks",JSON.stringify(taskArray));
+
+        } else {
+            console.log("remove canceled!");
+            
+        }
+        
         printTasks(taskArray);
         
     }
@@ -126,15 +135,20 @@ submitBtn.onclick = function action(){
 //                  פונקצייה שמפעילה את כפתור של מחיקת כל המשימות
 document.getElementById("clearBtn").onclick = ()=>  {
 
-    localStorage.clear();
+    if (confirm("Are you sure you want to remove all tasks??")) {
+        localStorage.clear();
     
-    localStorage.setItem("id",0);
-    id = 0;
-    taskArray.length = 0;
-    textArea.value = "";
-    console.log("Clear all tasks!");
+        localStorage.setItem("id",0);
+        id = 0;
+        taskArray.length = 0;
+        textArea.value = "";
+        console.log("Clear all tasks!");
     
-    printTasks(taskArray);
+    } else {
+        console.log("Remove canceled!");
+        
+    }
+    
 }
 //                  הפעלת חיפוש באמצעות לחיצה על Serch
 function playSerch() {
@@ -154,7 +168,7 @@ function serch() {
     let char = serch__input.value;
     console.log(`The char you serch is: ${char}`);
 
-    newTaskArray = taskArray.filter(task => task.content.includes(char));
+    newTaskArray = taskArray.filter(task => task.content.includes(char) || task.time.includes(char));
 
     if (newTaskArray.length > 0) {
 
