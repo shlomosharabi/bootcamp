@@ -8,6 +8,7 @@ const serch__input = document.getElementById("serch__input");
 const serch__btn = document.getElementById("serch__btn");
 let taskArray = JSON.parse(localStorage.getItem("tasks")) || [];
 let newTaskArray = [];
+let doneTasks = JSON.parse(localStorage.getItem("pass")) || [];
 let id;
 
 
@@ -38,21 +39,28 @@ function printTasks(array) {
         
         const task = document.createElement("div");
         const time = document.createElement("div");
-        
+
         task.className = "task";
+        element.isComplited == true? task.className = "pssedTasks": console.log("");
+        ;
+        
         time.className = "time";
 
         task.textContent = `${JSON.stringify(`${element.content}`)}`;
         time.textContent = `${element.time}`;
         task.appendChild(time);
 
-        const remuveButton = document.createElement("button")
+        const remuveButton = document.createElement("button");
+        const passButton = document.createElement("button");
+
         remuveButton.className = "remuveBtn";
+        passButton.className = "passBtn";
+
         remuveButton.id = element.id;  
-        // console.log(`Task ID is: '${element.id}'`);
-        // console.log(`Remuve button ID is: '${remuveButton.id}'`);
-              
+        passButton.id = element.id;  
+       
         remuveButton.textContent="Remuve";
+        passButton.textContent="Pass";
        
         //                 פונקציה למחיקת משימות פר משימה
      remuveButton.onclick =  () => {
@@ -63,7 +71,13 @@ function printTasks(array) {
         printTasks(taskArray);
         
     }
+    
+    passButton.onclick = ()=>{
+            element.isComplited = !element.isComplited;
+            localStorage.setItem("tasks",JSON.stringify(taskArray));
+    }
 
+        task.appendChild(passButton);
         task.appendChild(remuveButton);
         tasksBox.appendChild(task);
 
@@ -93,6 +107,7 @@ submitBtn.onclick = function action(){
         localStorage.setItem("id",JSON.stringify(id))
         let taskBody = {
             id:id,
+            isComplited:false,
             time: new Date().toLocaleString("en-US", {
                 dateStyle: "medium",
                 timeStyle: "short",
